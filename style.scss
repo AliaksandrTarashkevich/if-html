@@ -13,6 +13,8 @@ html, body {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 900;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -46,14 +48,6 @@ h2 {
   &__cards {
     display: flex;
     flex-wrap: wrap;
-    position: relative;
-
-    &--arrow {
-      cursor: pointer;
-      position: absolute;
-      top: 31%;
-      right: -8px;
-    }
   }
 
   .hotel-card {
@@ -79,6 +73,20 @@ h2 {
       color: $text-color-3;
       font-size: 24px;
       line-height: (28/24);
+    }
+    
+    &--last {
+      .hotel-card__img {
+        position: relative;
+
+        .hotels__cards--arrow {
+          cursor: pointer;
+          position: absolute;
+          top: 50%;
+          right: -25px;
+          transform: translate(0, -50%);
+        }
+      }
     }
   }
 }
