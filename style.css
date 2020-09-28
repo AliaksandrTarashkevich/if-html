@@ -42,6 +42,15 @@ h2 {
   display: flex;
   flex-wrap: wrap;
 }
+.hotels__cards--arrow .black {
+  display: none;
+}
+.hotels__cards--arrow:hover .white {
+  display: none;
+}
+.hotels__cards--arrow:hover .black {
+  display: block;
+}
 .hotels .hotel-card {
   max-width: 296px;
 }

@@ -48,6 +48,24 @@ h2 {
   &__cards {
     display: flex;
     flex-wrap: wrap;
+
+    &--arrow {
+
+      .black {
+        display: none;
+      }
+
+      &:hover {
+
+        .white {
+          display: none;
+        }
+
+        .black {
+          display: block;
+        }
+      }
+    }
   }
 
   .hotel-card {
