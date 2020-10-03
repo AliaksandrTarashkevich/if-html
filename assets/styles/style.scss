@@ -4,6 +4,26 @@ $text-color-2:                  #3077C6;
 $text-color-3:                  #BFBFBF;
 $container-max-width:           1250px;
 
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Medium.woff2') format('woff2'),
+  url('../fonts/Roboto-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Regular.woff2') format('woff2'),
+  url('../fonts/Roboto-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
 html, body {
   margin: 0;
   padding: 0;
@@ -12,7 +32,7 @@ html, body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 900;
+  font-weight: 500;
   margin: 0;
   padding: 0;
 }
@@ -28,12 +48,62 @@ img {
 h2 {
   color: $text-color;
   font-size: 40px;
-  line-height: (47/40);
 }
 
 .container {
   margin: 0 auto;
   max-width: $container-max-width;
+}
+
+.offers {
+  padding: 120px 0;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 110px;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      content: '';
+      top: 60px;
+      left: 50%;
+      width: 100px;
+      height: 4px;
+      background-color: #F5BD41;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__cards {
+    display: flex;
+    justify-content: center;
+  }
+
+  &-card {
+    width: 296px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+
+    &-img {
+      margin: 0 auto;
+      width: 100px;
+      height: 100px;
+
+      img {
+        margin: 0 auto;
+      }
+    }
+
+    &-text {
+      text-align: center;
+    }
+  }
 }
 
 .hotels {
