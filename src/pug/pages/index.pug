@@ -1,3 +1,53 @@
+-
+  var offers = {
+    title: 'What do we offer',
+    list: [
+      {
+        img: 'offers-1.svg',
+        text: 'Support 24/7'
+      },
+      {
+        img: 'offers-2.svg',
+        text: 'Communicate directly'
+      },
+      {
+        img: 'offers-3.svg',
+        text: 'Book online'
+      },
+      {
+        img: 'offers-4.svg',
+        text: 'Real guest reviews'
+      }
+    ]
+  };
+  var hotels = {
+    title: 'Homes guests loves',
+    white: 'hotel-arrow.svg',
+    black: 'hotel-arrow--hover.svg',
+    list: [
+      {
+        img: 'hotel-01.jpg',
+        name: 'Hotel Leopold',
+        loc: 'Saint Petersburg, Russia'
+      },
+      {
+        img: 'hotel-02.jpg',
+        name: 'Apartment Sunshine',
+        loc: 'Santa  Cruz de Tenerife, Spain'
+      },
+      {
+        img: 'hotel-03.jpg',
+        name: 'Villa Kunerad',
+        loc: 'Vysokie Tatry, Slowakia'
+      },
+      {
+        img: 'hotel-04.jpg',
+        name: 'Hostel Friendship',
+        loc: 'Berlin, Germany'
+      }
+    ]
+  };
+
 doctype html
 head
   meta(charset='UTF-8')
@@ -6,55 +56,6 @@ head
   link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap", rel='stylesheet', type='text/css')
   title TripHouse
 body
-  -
-    var offers = {
-      title: 'What do we offer',
-      list: [
-        {
-          img: 'offers-1.svg',
-          text: 'Support 24/7'
-        },
-        {
-          img: 'offers-2.svg',
-          text: 'Communicate directly'
-        },
-        {
-          img: 'offers-3.svg',
-          text: 'Book online'
-        },
-        {
-          img: 'offers-4.svg',
-          text: 'Real guest reviews'
-        }
-      ]
-    };
-    var hotels = {
-      title: 'Homes guests loves',
-      white: 'hotel-arrow.svg',
-      black: 'hotel-arrow--hover.svg',
-      list: [
-        {
-          img: 'hotel-01.jpg',
-          name: 'Hotel Leopold',
-          loc: 'Saint Petersburg, Russia'
-        },
-        {
-          img: 'hotel-02.jpg',
-          name: 'Apartment Sunshine',
-          loc: 'Santa  Cruz de Tenerife, Spain'
-        },
-        {
-          img: 'hotel-03.jpg',
-          name: 'Villa Kunerad',
-          loc: 'Vysokie Tatry, Slowakia'
-        },
-        {
-          img: 'hotel-04.jpg',
-          name: 'Hostel Friendship',
-          loc: 'Berlin, Germany'
-        }
-      ]
-    };
   .offers
     .container
       .offers__title
