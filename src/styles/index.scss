@@ -4,25 +4,23 @@ $text-color-2:                  #3077C6;
 $text-color-3:                  #BFBFBF;
 $container-max-width:           1250px;
 
-@font-face {
-  font-family: 'Roboto';
-  src: url('../fonts/Roboto-Medium.woff2') format('woff2'),
-  url('../fonts/Roboto-Medium.woff') format('woff');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Roboto';
-  src: url('../fonts/Roboto-Regular.woff2') format('woff2'),
-  url('../fonts/Roboto-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-
+//@font-face {
+//  font-family: 'Roboto';
+//  src: url('../../fonts/Roboto-Medium.woff2') format('woff2'),
+//  url('../../fonts/Roboto-Medium.woff') format('woff');
+//  font-weight: 500;
+//  font-style: normal;
+//  font-display: swap;
+//}
+//
+//@font-face {
+//  font-family: 'Roboto';
+//  src: url('../../fonts/Roboto-Regular.woff2') format('woff2'),
+//  url('../../fonts/Roboto-Regular.woff') format('woff');
+//  font-weight: normal;
+//  font-style: normal;
+//  font-display: swap;
+//}
 
 html, body {
   margin: 0;
@@ -90,7 +88,7 @@ h2 {
       margin-right: 15px;
     }
 
-    &-img {
+    &__img {
       margin: 0 auto;
       width: 100px;
       height: 100px;
@@ -100,7 +98,7 @@ h2 {
       }
     }
 
-    &-text {
+    &__text {
       text-align: center;
     }
   }
@@ -118,8 +116,13 @@ h2 {
   &__cards {
     display: flex;
     flex-wrap: wrap;
+    position: relative;
 
     &--arrow {
+      cursor: pointer;
+      position: absolute;
+      top: 128px;
+      right: -8px;
 
       .black {
         display: none;
@@ -161,20 +164,6 @@ h2 {
       color: $text-color-3;
       font-size: 24px;
       line-height: (28/24);
-    }
-    
-    &--last {
-      .hotel-card__img {
-        position: relative;
-
-        .hotels__cards--arrow {
-          cursor: pointer;
-          position: absolute;
-          top: 50%;
-          right: -25px;
-          transform: translate(0, -50%);
-        }
-      }
     }
   }
 }
