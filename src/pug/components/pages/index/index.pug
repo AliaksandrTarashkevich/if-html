@@ -1,0 +1,57 @@
+include ../../block/hotels
+include ../../block/offers
+
++offers({
+    title: {
+        text: 'What do we offer',
+        titleClass: 'offers__title'
+    },
+    offers: [
+        {
+            img: 'offers-1.svg',
+            text: 'Support 24/7'
+        },
+        {
+            img: 'offers-2.svg',
+            text: 'Communicate directly'
+        },
+        {
+            img: 'offers-3.svg',
+            text: 'Book online'
+        },
+        {
+            img: 'offers-4.svg',
+            text: 'Real guest reviews'
+        }
+    ]
+})
++hotels({
+    white: 'hotel-arrow.svg',
+    black: 'hotel-arrow--hover.svg',
+    title: {
+        text: 'Homes guests loves',
+        titleClass: 'hotels__title'
+    },
+    cards: [
+        {
+            img: 'hotel-01.jpg',
+            name: 'Hotel Leopold',
+            loc: 'Saint Petersburg, Russia'
+        },
+        {
+            img: 'hotel-02.jpg',
+            name: 'Apartment Sunshine',
+            loc: 'Santa  Cruz de Tenerife, Spain'
+        },
+        {
+            img: 'hotel-03.jpg',
+            name: 'Villa Kunerad',
+            loc: 'Vysokie Tatry, Slowakia'
+        },
+        {
+            img: 'hotel-04.jpg',
+            name: 'Hostel Friendship',
+            loc: 'Berlin, Germany'
+        }
+    ]
+})

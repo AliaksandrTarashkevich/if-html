@@ -1,0 +1,63 @@
+.hotels {
+  padding: 120px 0;
+  background: $background-color-1;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 105px;
+  }
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+
+    &--arrow {
+      cursor: pointer;
+      position: absolute;
+      top: 128px;
+      right: -8px;
+
+      .black {
+        display: none;
+      }
+
+      &:hover {
+
+        .white {
+          display: none;
+        }
+
+        .black {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .hotel-card {
+    max-width: 296px;
+
+    &:not(:last-child) {
+      padding-right: 1rem;
+    }
+
+    &__img {
+      margin-bottom: 1.5rem;
+    }
+
+    &__name {
+      color: $text-color-2;
+      text-decoration: none;
+      font-size: 24px;
+      line-height: (28/24);
+      margin-bottom: 24px;
+    }
+
+    &__loc {
+      color: $text-color-3;
+      font-size: 24px;
+      line-height: (28/24);
+    }
+  }
+}

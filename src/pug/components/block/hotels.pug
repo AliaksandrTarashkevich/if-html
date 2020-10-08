@@ -1,0 +1,16 @@
+include title
+mixin hotels(data)
+  .hotels
+    .container
+      +title(data.title)
+      .hotels__cards
+        each card in data.cards
+          .hotel-card
+            a(href="#")
+              .hotel-card__img
+                img(src=require('../../assets/images/' + card.img).default alt= card.name)
+              .hotel-card__name #{card.name}
+            .hotel-card__loc #{card.loc}
+        .hotels__cards--arrow
+          img(class="white" src=require('../../assets/images/' + data.white).default alt= data.white)
+          img(class="black" src=require('../../assets/images/' + data.black).default alt= data.black)
