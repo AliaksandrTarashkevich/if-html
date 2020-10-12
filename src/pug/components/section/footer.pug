@@ -1,0 +1,9 @@
+mixin footer(data)
+  .footer
+    .container
+      .footer__row
+        each section in data.sections
+          ul.footer__col
+            each item in section.links
+              li.footer__link
+                a(href=item.pageLink) #{item.page}
