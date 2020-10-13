@@ -7,3 +7,4 @@ mixin footer(data)
             each item in section.links
               li.footer__link
                 a(href=item.pageLink) #{item.page}
+      .footer__copy &copy; #{data.copyright}
