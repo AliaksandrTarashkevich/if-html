@@ -1,7 +1,9 @@
 @import "global";
-@import "components/offers";
-@import "components/hotels";
-@import "components/footer";
+@import "components/header-top";
+@import "sections/header";
+@import "sections/offers";
+@import "sections/hotels";
+@import "sections/footer";
 
 @font-face {
   font-family: 'Roboto';

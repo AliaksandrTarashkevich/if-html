@@ -1,0 +1,49 @@
+.header {
+
+  &__top {
+    margin-bottom: 202px;
+    padding-top: 51px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+  }
+
+  &__pages {
+    margin-right: 48px;
+
+    a {
+      font-size: 24px;
+      line-height: (28/24);
+      text-align: center;
+      color: #FFFFFF;
+
+      &.active {
+        border-bottom: 4px solid #F5BD41;
+        padding-bottom: 12px;
+      }
+
+      &:first-child {
+        padding-bottom: 12px;
+        margin-right: 24px;
+        border-bottom: 4px solid #F5BD41;
+      }
+    }
+  }
+
+  &__icons {
+    display: flex;
+    align-items: center;
+
+    a {
+
+      &:first-child {
+        margin-right: 24px;
+      }
+    }
+  }
+}

@@ -2,14 +2,46 @@ include ../components/page
 include ../sections/offers
 include ../sections/hotels
 include ../sections/footer
+include ../sections/header
 //include ../../contents/contents
 
 -
+  var headerData = {
+    headerTop: {
+      pageLink: '#',
+      img: 'logo.svg',
+      text: 'TripHouse logo',
+      links: [
+        {
+          pageLink: "#",
+          page: 'Stays'
+        },
+        {
+          pageLink: "#",
+          page: 'Attractions'
+        }
+      ],
+      icons: [
+        {
+          img: 'night.svg',
+          text: 'Night page button',
+          pageLink: "#"
+        },
+        {
+          img: 'account.svg',
+          text: 'Log in button',
+          pageLink: "#"
+        }
+      ]
+    },
+    title: 'Discover stays\n' +
+            'to live, work or just relax'
+  };
   var pageData = {
-      keywords: ['trip','house'],
-      description: 'Page for hotels',
-      title: 'TripHouse'
-  }
+    keywords: ['trip', 'house'],
+    description: 'Page for hotels',
+    title: 'TripHouse'
+  };
   var hotelsData = {
     white: 'hotel-arrow.svg',
     black: 'hotel-arrow--hover.svg',
@@ -39,7 +71,7 @@ include ../sections/footer
         loc: 'Berlin, Germany'
       }
     ]
-  }
+  };
   var offersData = {
     title: {
       text: 'What do we offer',
@@ -63,7 +95,7 @@ include ../sections/footer
         text: 'Real guest reviews'
       }
     ]
-   };
+  };
   var footerData = {
     copyright: '2020 TripHouse, Inc. All rights reserved',
     sections: [
@@ -143,6 +175,7 @@ include ../sections/footer
   };
 
 +page(pageData)
+  +header(headerData)
   +offers(offersData)
   +hotels(hotelsData)
   +footer(footerData)

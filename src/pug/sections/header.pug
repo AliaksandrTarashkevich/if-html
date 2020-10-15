@@ -1,0 +1,6 @@
+include ../components/header-top
+mixin header(data)
+  .header
+    .container
+      +header-top(data.headerTop)
+      .header__title #{data.title}
