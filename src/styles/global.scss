@@ -1,5 +1,11 @@
 @import "variables/variables";
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -26,7 +32,15 @@ h2 {
   font-size: 40px;
 }
 
+input {
+  padding: 0;
+  border: none;
+  font-family: Roboto;
+  font-weight: 400;
+}
+
 .container {
   margin: 0 auto;
+  padding: 0 16px;
   max-width: $container-max-width;
 }

@@ -1,0 +1,11 @@
+.app-down {
+  display: flex;
+  justify-content: center;
+
+  a {
+
+    &:first-child {
+      margin-right: 16px;
+    }
+  }
+}

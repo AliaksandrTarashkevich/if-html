@@ -1,6 +1,12 @@
 include ../components/header-top
+include ../components/header-input
+include ../components/app-down
 mixin header(data)
   .header
     .container
       +header-top(data.headerTop)
       .header__title #{data.title}
+      .header__title--2 #{data.sectitle}
+      +header-input(data.headerInput)
+      +app-down(data.appDown)
+
