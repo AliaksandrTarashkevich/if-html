@@ -48,4 +48,5 @@ textarea:focus, input:focus{
   margin: 0 auto;
   padding: 0 16px;
   max-width: $container-max-width;
+  min-width: $container-min-width;
 }
