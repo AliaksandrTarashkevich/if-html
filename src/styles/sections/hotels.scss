@@ -1,5 +1,5 @@
 .hotels {
-  padding: 120px 0;
+  padding: 123px 0;
   background: $background-color-1;
 
   &__title {
@@ -36,10 +36,10 @@
   }
 
   .hotel-card {
-    max-width: 296px;
+    max-width: 25%;
 
     &:not(:last-child) {
-      padding-right: 1rem;
+      margin-right: 1rem;
     }
 
     &__img {
