@@ -1,0 +1,34 @@
+.footer {
+  padding: 120px 104px;
+  background-color: #10367C;
+
+  &__row {
+    display: flex;
+  }
+
+  &__col {
+    list-style: none;
+    width: 33.333%;
+    margin: 0 0 4rem;
+  }
+
+  &__link {
+
+    &:first-child {
+      font-weight: 500;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+
+    a {
+      color: $brand-white;
+    }
+  }
+
+  &__copy {
+    color: $brand-white;
+    font-size: 13px;
+  }
+}

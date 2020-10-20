@@ -1,0 +1,11 @@
+include ../components/title
+mixin offers(data)
+  .offers
+    .container
+      +title(data.title)
+      .offers__cards
+        each offer in data.offers
+          .offers-card
+            .offers-card__img
+              img(src=require('../../assets/images/' + offer.img).default alt= offer.text)
+            .offers-card__text #{offer.text}

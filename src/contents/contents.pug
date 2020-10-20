@@ -1,15 +1,4 @@
-include ../components/page
-include ../sections/offers
-include ../sections/hotels
-include ../sections/footer
-//include ../../contents/contents
-
 -
-  var pageData = {
-      keywords: ['trip','house'],
-      description: 'Page for hotels',
-      title: 'TripHouse'
-  }
   var hotelsData = {
     white: 'hotel-arrow.svg',
     black: 'hotel-arrow--hover.svg',
@@ -63,9 +52,8 @@ include ../sections/footer
         text: 'Real guest reviews'
       }
     ]
-   };
+  };
   var footerData = {
-    copyright: '2020 TripHouse, Inc. All rights reserved',
     sections: [
       {
         links: [
@@ -127,22 +115,25 @@ include ../sections/footer
         links: [
           {
             pageLink: '#',
-            page: 'Support'
+            page: 'About'
           },
           {
             pageLink: '#',
-            page: 'Contact Customer Service'
+            page: 'How Triphouse works'
           },
           {
             pageLink: '#',
-            page: 'FAQ'
+            page: 'Careers'
+          },
+          {
+            pageLink: '#',
+            page: 'Privacy'
+          },
+          {
+            pageLink: '#',
+            page: 'Terms'
           }
         ]
       }
     ]
   };
-
-+page(pageData)
-  +offers(offersData)
-  +hotels(hotelsData)
-  +footer(footerData)
