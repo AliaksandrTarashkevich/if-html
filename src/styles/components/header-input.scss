@@ -1,0 +1,75 @@
+.header-input {
+  margin-bottom: 120px;
+
+  &__row {
+    display: flex;
+  }
+
+  &__block {
+    width: 100%;
+    position: relative;
+
+    &--dest {
+      max-width: 467px;
+
+      input {
+        border-radius: 8px 0 0 8px;
+        max-width: 100%;
+      }
+    }
+
+    &--date {
+      background-color: $brand-white;
+      max-width: 259px;
+
+      input {
+        max-width: 100%;
+        border: 3px solid $brand-3;
+        border-radius: 8px;
+
+        .altar & {
+          padding: 21px 22px 17px;
+        }
+      }
+    }
+
+    &--info {
+      max-width: 322px;
+
+      input {
+        max-width: 100%;
+      }
+    }
+
+    input {
+      font-size: 18px;
+      line-height: (21/18);
+      color: $text-color;
+      padding: 23px 30px 21px;
+      width: 100%;
+    }
+
+    label {
+      position: absolute;
+      top: -44px;
+      left: 25px;
+      font-size: 18px;
+      line-height: (21/18);
+      color: $brand-white;
+    }
+  }
+
+  &__submit {
+    background-color: $brand-2;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: (28/24);
+    text-align: center;
+    color: $brand-white;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 192px;
+    margin-left: -8px;
+    z-index: 10;
+  }
+}

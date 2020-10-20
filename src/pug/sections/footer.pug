@@ -1,6 +1,8 @@
 mixin footer(data)
   .footer
     .container
+      .footer__logo
+        img(src=require('../../assets/images/' + data.img).default alt= data.text)
       .footer__row
         each section in data.sections
           ul.footer__col

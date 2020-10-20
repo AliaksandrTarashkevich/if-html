@@ -1,0 +1,12 @@
+include ../components/header-top
+include ../components/header-title
+include ../components/header-input
+include ../components/app-down
+mixin header(data)
+  .header
+    .container
+      +header-top(data.headerTop)
+      +header-title(data.headerTitle)
+      +header-input(data.headerInput)
+      +app-down(data.appDown)
+

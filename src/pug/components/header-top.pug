@@ -1,0 +1,13 @@
+mixin header-top(data)
+  .header__top
+    .header__logo
+      a(href=data.pageLink)
+        img(src=require('../../assets/images/' + data.img).default alt= data.text)
+    .header__nav
+      .header__pages
+        each link in data.links
+          a(href=link.pageLink class=link.linkClass) #{link.page}
+      .header__icons
+        each icon in data.icons
+          a(href=icon.pageLink)
+            img(src=require('../../assets/images/' + icon.img).default alt= icon.text)

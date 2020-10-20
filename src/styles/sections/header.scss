@@ -1,0 +1,19 @@
+.header {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #383838;
+  background-image: url('../assets/images/header-bg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 120px;
+
+  &__title {
+    margin-bottom: 145px;
+    max-width: 542px;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: (59/50);
+    color: #FFFFFF;
+  }
+}

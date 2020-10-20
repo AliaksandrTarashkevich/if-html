@@ -2,14 +2,97 @@ include ../components/page
 include ../sections/offers
 include ../sections/hotels
 include ../sections/footer
+include ../sections/header
 //include ../../contents/contents
 
 -
+  var headerData = {
+    headerTop: {
+      pageLink: '#',
+      img: 'logo.svg',
+      text: 'TripHouse logo',
+      links: [
+        {
+          linkClass: 'active',
+          pageLink: "#",
+          page: 'Stays'
+        },
+        {
+          pageLink: "#",
+          page: 'Attractions'
+        }
+      ],
+      icons: [
+        {
+          img: 'night.svg',
+          text: 'Night page button',
+          pageLink: "#"
+        },
+        {
+          img: 'account.svg',
+          text: 'Log in button',
+          pageLink: "#"
+        }
+      ]
+    },
+    headerInput: {
+      submitText: 'Search',
+      inputs: [
+        {
+          blockClass: 'dest',
+          labelFor: 'destination',
+          labelText: 'Your destination or hotel name',
+          inputType: 'text',
+          inputId: 'destination',
+          inputName: 'destination',
+          inputValue: 'New York',
+        },
+        {
+          blockClass: 'date',
+          labelFor: 'check-date',
+          labelText: 'Check-in — Check-out',
+          inputType: 'text',
+          inputId: 'check-date',
+          inputName: 'check-date',
+          inputValue: 'Tue 15 Sept — Sat 19 Sept',
+        },
+        {
+          blockClass: 'info',
+          inputType: 'text',
+          inputId: 'check-info',
+          inputName: 'check-info',
+          inputValue: '2 Adults — 0 Children — 1 Room',
+        }
+      ]
+    },
+    appDown: {
+        apps : [
+          {
+            appLink: '#',
+            img: 'google-app.svg',
+            text: 'google-app.svg'
+          },
+          {
+            appLink: '#',
+            img: 'appstore-app.svg',
+            text: 'appstore-app.svg'
+          }
+        ]
+    },
+    headerTitle: {
+      title: 'Discover stays<br>to live, work or just relax',
+      class: ''
+          // {
+          //   title: '',
+          //   class: '--2'
+          // }
+    },
+  };
   var pageData = {
-      keywords: ['trip','house'],
-      description: 'Page for hotels',
-      title: 'TripHouse'
-  }
+    keywords: ['trip', 'house'],
+    description: 'Page for hotels',
+    title: 'TripHouse'
+  };
   var hotelsData = {
     white: 'hotel-arrow.svg',
     black: 'hotel-arrow--hover.svg',
@@ -39,7 +122,7 @@ include ../sections/footer
         loc: 'Berlin, Germany'
       }
     ]
-  }
+  };
   var offersData = {
     title: {
       text: 'What do we offer',
@@ -63,8 +146,10 @@ include ../sections/footer
         text: 'Real guest reviews'
       }
     ]
-   };
+  };
   var footerData = {
+    img: 'logo_footer.svg',
+    text: 'logo_footer',
     copyright: '2020 TripHouse, Inc. All rights reserved',
     sections: [
       {
@@ -142,7 +227,11 @@ include ../sections/footer
     ]
   };
 
-+page(pageData)
-  +offers(offersData)
-  +hotels(hotelsData)
-  +footer(footerData)
+.altar
+  // в пейдждата добавить класс по имени страницы для приоритета стилей (Андрей добавляет для body), altar удалить
+  // над хедером вставить миксин для спрайта
+  +page(pageData)
+    +header(headerData)
+    +offers(offersData)
+    +hotels(hotelsData)
+    +footer(footerData)

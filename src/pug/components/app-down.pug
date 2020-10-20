@@ -1,0 +1,5 @@
+mixin app-down(data)
+  .app-down
+    each app in data.apps
+      a.app-down__icon(href=app.appLink)
+        img(src=require('../../assets/images/' + app.img).default alt= app.text)

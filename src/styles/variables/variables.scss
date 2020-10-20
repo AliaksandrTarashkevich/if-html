@@ -1,7 +1,23 @@
 $background-color-1:            #EAF0F9;
 $brand-white:                   #ffffff;
 $brand-black:                   #000000;
+$brand-1:                       #10367C;
+$brand-2:                       #3077C6;
+$brand-3:                       #F5BD41;
 $text-color:                    #383838;
 $text-color-2:                  #3077C6;
 $text-color-3:                  #BFBFBF;
+
+$screen-xs-max:                 480px;
+$screen-sm-max:                 768px;
+$screen-md-max:                 1024px;
+$screen-lg-max:                 1200px;
+
+$screen-xs-min:                 320px;
+$screen-sm-min:                 481px;
+$screen-md-min:                 769px;
+$screen-lg-min:                 1025px;
+$screen-xl-min:                 1201px;
+
 $container-max-width:           1264px;
+$container-min-width:           $screen-xs-min;
