@@ -80,15 +80,12 @@ include ../sections/header
         ]
     },
     headerTitle: {
-        titles: [
-          {
-            title: 'Discover stays',
-          },
-          {
-            title: 'to live, work or just relax',
-            class: '--2'
-          }
-        ]
+      title: 'Discover stays<br>to live, work or just relax',
+      class: ''
+          // {
+          //   title: '',
+          //   class: '--2'
+          // }
     },
   };
   var pageData = {
@@ -231,6 +228,8 @@ include ../sections/header
   };
 
 .altar
+  // в пейдждата добавить класс по имени страницы для приоритета стилей (Андрей добавляет для body), altar удалить
+  // над хедером вставить миксин для спрайта
   +page(pageData)
     +header(headerData)
     +offers(offersData)

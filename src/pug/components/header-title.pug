@@ -1,3 +1,2 @@
 mixin header-title(data)
-  each title in data.titles
-    .header__title(class='header__title' + title.class) #{title.title}
+  .header__title(class='header__title' + data.class) !{data.title}
