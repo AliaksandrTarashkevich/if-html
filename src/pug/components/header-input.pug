@@ -1,9 +1,10 @@
 mixin header-input(data)
   .header-input
-    .header-input__row
-      each input in data.inputs
-        .header-input__block(class= 'header-input__block--'+ input.blockClass)
-          input(type=input.inputType, id=input.inputId, name=input.inputName, value=input.inputValue)
-          label(for=input.labelFor)
-            | #{input.labelText}
-      input.header-input__submit(type='submit', value=data.submitText)
+    form
+      .header-input__row.row
+        each input in data.inputs
+          .header-input__block(class= 'header-input__block--'+ input.blockClass)
+            input(type=input.inputType, id=input.inputId, name=input.inputName, value=input.inputValue)
+            label(for=input.labelFor)
+              | #{input.labelText}
+        input.header-input__submit(type='submit', value=data.submitText)

@@ -32,7 +32,6 @@
   }
 
   &__cards {
-    display: flex;
     justify-content: center;
 
     @media (max-width: $screen-lg-max) {
@@ -41,14 +40,9 @@
   }
 
   &-card {
-    width: 296px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-    &:not(:last-child) {
-      margin-right: 15px;
-    }
 
     &__img {
       display: flex;
@@ -68,25 +62,20 @@
     }
 
     @media (max-width: $screen-lg-max) {
-      width: 50%;
 
-      .altar & {
-        margin-right: 0;
+      &__img {
+        margin-bottom: 16px;
       }
+    }
+
+    @media (max-width: $screen-md-max) {
 
       &:nth-child(-n+2) {
         margin-bottom: 32px;
       }
-
-      &__img {
-        margin-bottom: 16px;
-        width: 70px;
-        height: 70px;
-      }
     }
 
     @media (max-width: $screen-sm-max) {
-      width: 100%;
 
       &:not(:last-child){
         margin-bottom: 32px;

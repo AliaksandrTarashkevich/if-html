@@ -7,7 +7,6 @@
   }
 
   &__row {
-    display: flex;
 
     @media (max-width: $screen-sm-max) {
       justify-content: space-between;
@@ -16,12 +15,7 @@
 
   &__col {
     list-style: none;
-    width: 33.333%;
     margin: 0 0 4rem;
-
-    @media (max-width: $screen-sm-max) {
-      width: auto;
-    }
   }
 
   &__logo {

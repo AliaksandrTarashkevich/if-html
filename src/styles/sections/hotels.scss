@@ -8,8 +8,6 @@
   }
 
   &__cards {
-    display: flex;
-    flex-wrap: wrap;
     position: relative;
 
     &--arrow {
@@ -36,11 +34,6 @@
   }
 
   .hotel-card {
-    max-width: 25%;
-
-    &:not(:last-child) {
-      margin-right: 1rem;
-    }
 
     &__img {
       margin-bottom: 1.5rem;

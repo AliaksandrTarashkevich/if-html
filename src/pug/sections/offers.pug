@@ -3,9 +3,9 @@ mixin offers(data)
   .offers
     .container
       +title(data.title)
-      .offers__cards
+      .offers__cards.row
         each offer in data.offers
-          .offers-card
+          .offers-card.col-3.col-md-6.col-sm-12
             .offers-card__img
               img(src=require('../../assets/images/' + offer.img).default alt= offer.text)
             .offers-card__text #{offer.text}
