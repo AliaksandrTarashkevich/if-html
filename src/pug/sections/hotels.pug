@@ -5,7 +5,7 @@ mixin hotels(data)
       +title(data.title)
       .hotels__cards.row
         each card in data.cards
-          .hotel-card.col-3.col-md-6.col-sm-12
+          .hotel-card.col-3.col-md-6.col-xs-12
             a(href="#")
               .hotel-card__img
                 img(src=require('../../assets/images/' + card.img).default alt= card.name)

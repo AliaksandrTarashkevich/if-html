@@ -7,4 +7,5 @@ mixin header-input(data)
             input(type=input.inputType, id=input.inputId, name=input.inputName, value=input.inputValue)
             label(for=input.labelFor)
               | #{input.labelText}
-        input.header-input__submit(type='submit', value=data.submitText)
+        .header-input__block.header-input__block--btn.col-md-12
+          input.header-input__submit(type='submit', value=data.submitText)

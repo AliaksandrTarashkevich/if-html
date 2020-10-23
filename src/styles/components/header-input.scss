@@ -1,29 +1,38 @@
 .header-input {
   margin-bottom: 120px;
 
+  form {
+    background-color: $brand-white;
+    border-radius: 8px;
+
+    @media (max-width: $screen-md-max) {
+      padding: 8px;
+      background-color: $brand-3;
+    }
+  }
+
   &__row {
     display: flex;
   }
 
   &__block {
-    width: 100%;
     position: relative;
 
-    &--dest {
-      max-width: 467px;
+    @media (max-width: $screen-md-max) {
+      margin-bottom: 16px;
+    }
 
-      input {
-        border-radius: 8px 0 0 8px;
-        max-width: 100%;
+    &--dest {
+
+      @media (min-width: $screen-lg-min) {
+        max-width: 467px;
       }
     }
 
     &--date {
-      background-color: $brand-white;
-      max-width: 259px;
 
-      input {
-        max-width: 100%;
+      @media (min-width: $screen-lg-min) {
+        max-width: 259px;
         border: 3px solid $brand-3;
         border-radius: 8px;
 
@@ -34,14 +43,35 @@
     }
 
     &--info {
-      max-width: 322px;
 
-      input {
-        max-width: 100%;
+      @media (min-width: $screen-lg-min) {
+        max-width: 322px;
+      }
+    }
+
+    &--btn {
+      margin-bottom: 0;
+
+      .header-input__submit {
+        background-color: $brand-2;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: (28/24);
+        text-align: center;
+        color: $brand-white;
+        cursor: pointer;
+        border-radius: 8px;
+        z-index: 10;
+
+        @media (min-width: $screen-lg-min) {
+          width: 192px;
+        }
       }
     }
 
     input {
+      border-radius: 8px;
+      max-width: 100%;
       font-size: 18px;
       line-height: (21/18);
       color: $text-color;
@@ -57,19 +87,5 @@
       line-height: (21/18);
       color: $brand-white;
     }
-  }
-
-  &__submit {
-    background-color: $brand-2;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: (28/24);
-    text-align: center;
-    color: $brand-white;
-    cursor: pointer;
-    border-radius: 8px;
-    width: 192px;
-    margin-left: -8px;
-    z-index: 10;
   }
 }
