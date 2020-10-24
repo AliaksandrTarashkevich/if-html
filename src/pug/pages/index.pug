@@ -24,13 +24,21 @@ include ../sections/header
       ],
       icons: [
         {
+          iconClass: 'icon-night',
           img: 'night.svg',
           text: 'Night page button',
           pageLink: "#"
         },
         {
+          iconClass: 'icon-account',
           img: 'account.svg',
           text: 'Log in button',
+          pageLink: "#"
+        },
+        {
+          iconClass: 'icon-menu',
+          img: 'menu.svg',
+          text: 'Menu button',
           pageLink: "#"
         }
       ]
@@ -39,7 +47,7 @@ include ../sections/header
       submitText: 'Search',
       inputs: [
         {
-          blockClass: 'dest col-md-12',
+          blockClass: 'dest',
           labelFor: 'destination',
           labelText: 'Your destination or hotel name',
           inputType: 'text',
@@ -48,7 +56,7 @@ include ../sections/header
           inputValue: 'New York',
         },
         {
-          blockClass: 'date col-md-6',
+          blockClass: 'date',
           labelFor: 'check-date',
           labelText: 'Check-in — Check-out',
           inputType: 'text',
@@ -57,12 +65,15 @@ include ../sections/header
           inputValue: 'Tue 15 Sept — Sat 19 Sept',
         },
         {
-          blockClass: 'info col-md-6',
+          blockClass: 'info',
           inputType: 'text',
           inputId: 'check-info',
           inputName: 'check-info',
           inputValue: '2 Adults — 0 Children — 1 Room',
         }
+      ],
+      mobInputs: [
+
       ]
     },
     appDown: {

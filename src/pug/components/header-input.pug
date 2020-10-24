@@ -1,11 +1,27 @@
 mixin header-input(data)
   .header-input
     form
-      .header-input__row.row
+      .header-input__row
         each input in data.inputs
           .header-input__block(class= 'header-input__block--'+ input.blockClass)
             input(type=input.inputType, id=input.inputId, name=input.inputName, value=input.inputValue)
             label(for=input.labelFor)
               | #{input.labelText}
-        .header-input__block.header-input__block--btn.col-md-12
+        .header-input__block.header-input__block--btn
           input.header-input__submit(type='submit', value=data.submitText)
+  //.header-input.header-input__mobile
+  //  form
+  //    .row
+  //      each mobInput in data.mobInputs
+  //        .col(class= mobInput.blockClass)
+  //          input(type=mobInput.inputType, id=mobInput.inputId, name=mobInput.inputName, value=mobInput.inputValue)
+  //          label(for=mobInput.labelFor)
+  //            | #{mobInput.labelText}
+  //      .col-md-12
+  //        .header-input__reserve
+  //          each reserveInput in data.reserveInputs
+  //            input(type=reserveInput.inputType, id=reserveInput.inputId, name=reserveInput.inputName, value=reserveInput.inputValue)
+  //            label(for=reserveInput.labelFor)
+  //              | #{reserveInput.labelText}
+  //      .header-input__block.header-input__block--btn.col-md-12
+  //        input.header-input__submit(type='submit', value=data.submitText)
