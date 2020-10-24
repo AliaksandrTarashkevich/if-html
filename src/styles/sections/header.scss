@@ -15,5 +15,17 @@
     font-size: 50px;
     line-height: (59/50);
     color: #FFFFFF;
+
+    @media (max-width: $screen-sm-max) {
+      margin-bottom: 2rem;
+      max-width: 100%;
+      font-size: 30px;
+      line-height: (35/30);
+    }
+  }
+
+  @media (max-width: $screen-sm-max) {
+    min-height: 0;
+    padding-bottom: 40px;
   }
 }

@@ -41,14 +41,28 @@
           display: block;
         }
       }
-
-      //@media (max-width: $screen-sm-max) {
-      //  display: none;
-      //}
     }
   }
 
   .hotel-card {
+
+    &:last-of-type {
+
+      .hotel-card__img {
+
+        &:after {
+          content: '';
+          position: absolute;
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+          background-color: red;
+          right: -15px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
 
     &__img {
       margin-bottom: 1.5rem;
@@ -112,6 +126,24 @@
       &:nth-child(3),
       &:nth-child(4){
         display: none;
+      }
+
+      &:nth-child(2) {
+
+        .hotel-card__img {
+
+          &:after {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: red;
+            right: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
       }
     }
   }

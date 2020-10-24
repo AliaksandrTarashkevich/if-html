@@ -6,6 +6,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media (max-width: $screen-sm-max) {
+      margin-bottom: 52px;
+    }
   }
 
   &__nav {
