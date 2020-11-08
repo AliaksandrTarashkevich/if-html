@@ -3,6 +3,12 @@
 
   &__row {
     display: flex;
+    flex-wrap: wrap;
+  }
+
+  form {
+    background-color: $brand-white;
+    border-radius: 8px;
   }
 
   &__block {
@@ -14,34 +20,62 @@
 
       input {
         border-radius: 8px 0 0 8px;
-        max-width: 100%;
+      }
+
+      @media (max-width: $screen-lg-max) {
+        max-width: 50%;
       }
     }
 
     &--date {
       background-color: $brand-white;
       max-width: 259px;
+      border: 3px solid $brand-3;
+      border-radius: 8px;
 
       input {
         max-width: 100%;
-        border: 3px solid $brand-3;
         border-radius: 8px;
 
         .altar & {
           padding: 21px 22px 17px;
         }
       }
+
+      @media (max-width: $screen-lg-max) {
+        max-width: 50%;
+      }
     }
 
     &--info {
-      max-width: 322px;
+      max-width: 314px;
 
-      input {
+      @media (max-width: $screen-lg-max) {
         max-width: 100%;
       }
     }
 
+    &--btn {
+      flex-grow: 1;
+      width: 192px;
+
+      .header-input__submit {
+        padding-top: 19px;
+        padding-bottom: 18px;
+        background-color: $brand-2;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: (28/24);
+        text-align: center;
+        color: $brand-white;
+        cursor: pointer;
+        border-radius: 8px;
+        z-index: 10;
+      }
+    }
+
     input {
+      max-width: 100%;
       font-size: 18px;
       line-height: (21/18);
       color: $text-color;
@@ -59,17 +93,120 @@
     }
   }
 
-  &__submit {
-    background-color: $brand-2;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: (28/24);
-    text-align: center;
-    color: $brand-white;
-    cursor: pointer;
+  // Styles for mobile block
+
+  &__mobile {
+    margin-bottom: 2rem;
+    display: none;
+
+    .header-input__submit {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-size: 19px;
+      line-height: (22/19);
+    }
+
+    .col {
+      margin-bottom: 0.5rem;
+    }
+
+    form {
+      padding: 0.5rem;
+      background: $brand-3;
+      border-radius: 0;
+    }
+
+    input {
+      width: 100%;
+      padding: 1.5rem 0.5rem 0.5rem;
+      color: $text-color;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: (18/15);
+      border-radius: 8px;
+    }
+
+    label {
+      position: absolute;
+      font-size: 12px;
+      line-height: (14/12);
+      color: $text-color;
+    }
+  }
+
+  &__dest {
+    position: relative;
+
+    input {
+      padding: 1rem 2rem;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-image: url('../assets/images/input-search.svg');
+    }
+  }
+
+  &__checkin,
+  &__checkout {
+    position: relative;
+
+    label {
+      top: 6px;
+      left: 12px;
+    }
+  }
+
+  &__checkin {
+    padding-right: 4px;
+  }
+
+  &__checkout {
+    padding-left: 4px;
+  }
+
+  &__reserve {
+    display: flex;
+    background-color: $brand-white;
     border-radius: 8px;
-    width: 192px;
-    margin-left: -8px;
-    z-index: 10;
+
+    &--input {
+      position: relative;
+      width: 33.33%;
+
+      label {
+        position: absolute;
+        top: 6px;
+        left: 8px;
+      }
+
+      &:not(:last-child) {
+
+        &:after {
+          position: absolute;
+          content: '';
+          height: 32px;
+          width: 1px;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          background-color: $text-color-3;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $screen-md-max) {
+    display: none;
+
+    &__mobile {
+      display: block;
+    }
   }
 }

@@ -24,13 +24,21 @@ include ../sections/header
       ],
       icons: [
         {
+          iconClass: 'icon-night',
           img: 'night.svg',
           text: 'Night page button',
           pageLink: "#"
         },
         {
+          iconClass: 'icon-account',
           img: 'account.svg',
           text: 'Log in button',
+          pageLink: "#"
+        },
+        {
+          iconClass: 'icon-menu',
+          img: 'menu.svg',
+          text: 'Menu button',
           pageLink: "#"
         }
       ]
@@ -62,6 +70,59 @@ include ../sections/header
           inputId: 'check-info',
           inputName: 'check-info',
           inputValue: '2 Adults — 0 Children — 1 Room',
+        }
+      ],
+      mobInputs: [
+        {
+          blockClass: 'col-md-12 header-input__dest',
+          inputType: 'text',
+          inputId: 'mob-dest',
+          inputName: 'mob-dest',
+          inputValue: 'Your destination or hotel name',
+        },
+        {
+          blockClass: 'col-md-6 header-input__checkin',
+          labelFor: 'checkin-date',
+          labelText: 'Check-in date',
+          inputType: 'text',
+          inputId: 'checkin-date',
+          inputName: 'checkin-date',
+          inputValue: 'Tue 15 Sept 2020',
+        },
+        {
+          blockClass: 'col-md-6 header-input__checkout',
+          labelFor: 'checkout-date',
+          labelText: 'Check-out date',
+          inputType: 'text',
+          inputId: 'checkout-date',
+          inputName: 'checkout-date',
+          inputValue: 'Sat 19 Sept 2020',
+        }
+      ],
+      reserveInputs: [
+        {
+          labelFor: 'input-adults',
+          labelText: 'Adults',
+          inputType: 'text',
+          inputId: 'input-adults',
+          inputName: 'input-adults',
+          inputValue: '2',
+        },
+        {
+          labelFor: 'input-children',
+          labelText: 'Children',
+          inputType: 'text',
+          inputId: 'input-children',
+          inputName: 'input-children',
+          inputValue: '0',
+        },
+        {
+          labelFor: 'input-rooms',
+          labelText: 'Rooms',
+          inputType: 'text',
+          inputId: 'input-rooms',
+          inputName: 'input-rooms',
+          inputValue: '1',
         }
       ]
     },
@@ -153,6 +214,7 @@ include ../sections/header
     copyright: '2020 TripHouse, Inc. All rights reserved',
     sections: [
       {
+        col: 'col-sm-3',
         links: [
           {
             pageLink: '#',
@@ -177,6 +239,7 @@ include ../sections/header
         ]
       },
       {
+        col: 'col-sm-6',
         links: [
           {
             pageLink: '#',
@@ -209,6 +272,7 @@ include ../sections/header
         ]
       },
       {
+        col: 'col-sm-3',
         links: [
           {
             pageLink: '#',

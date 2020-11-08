@@ -3,9 +3,9 @@ mixin footer(data)
     .container
       .footer__logo
         img(src=require('../../assets/images/' + data.img).default alt= data.text)
-      .footer__row
+      .footer__row.row
         each section in data.sections
-          ul.footer__col
+          ul.footer__col.col-4(class=section.col)
             each item in section.links
               li.footer__link
                 a(href=item.pageLink) #{item.page}
